@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboad.css" />
+  </head>
+  <body>
+    <!--sidebar-->
+    <div class="sidebar">
+      <a href="#" class="logo">
+        <i class="bx-code-alt"></i>
+        <div class="logo-name"><span>Resume Builder</span></div>
+      </a>
+      <div class="butttons">
+        <button onclick="showForm('personalForm')">Personal Information</button>
+        <button onclick="showForm('objectiveForm')">Objective</button>
+        <button onclick="showForm('educationForm')">Education</button>
+        <button onclick="showForm('skillsForm')">Skills</button>
+        </div>
+    </div>
+    <!--End of sidebar-->
+
+        <!--form-->
+
+      <section class="container">
+      <header>Personal Information</header>
+      <form action="" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" />
+        </div>
+
+        <div class="input-box">
+          <label>Email</label>
+          <input type="text" placeholder="Enter full name" />
+        </div>
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input type="number" placeholder="Enter full number" />
+        </div>
+        <div class="input-box">
+          <label>LinkedIn Link</label>
+          <input type="text" placeholder="Enter full name" />
+        </div>
+        <div class="input-box">
+          <label for="github">Enter GitHub Link:</label>
+          <input type="text" id="github" required />
+        </div>
+        <button type="button" class="btn" onclick="showForm('objectiveForm')">Next</button>
+      </form>
+
+    <!--objective-->
+    <div id="objectiveForm" class="form-section" style="display: none;">
+        <header>Objective</header>
+        <form class="form">
+          <div class="input-box">
+            <label>Objective Statement</label>
+            <textarea placeholder="Enter your objective" rows="4"></textarea>
+          </div>
+          <button type="button" class="btn" onclick="showForm('educationForm')">Next</button>
+        </form>
+      </div>
+
+          <!--Education-->
+          <div id="educationForm" class="form-section" style="display: none;">
+        <header>Education</header>
+        <form class="form">
+          <div class="input-box">
+            <label>Institution</label>
+            <input type="text" placeholder="Enter institution name" />
+          </div>
+          <div class="input-box">
+            <label>Degree</label>
+            <input type="text" placeholder="Enter degree" />
+          </div>
+          <div class="input-box">
+            <label>Year of Graduation</label>
+            <input type="text" placeholder="Enter year of graduation" />
+          </div>
+          <button type="button" class="btn" onclick="showForm('skillsForm')">Next</button>
+        </form>
+      </div>
+
+      <!--Skills-->
+       <div id="skillsForm" class="form-section" style="display: none;">
+        <header>Skills</header>
+        <form class="form">
+          <div class="input-box">
+            <label>Skills</label>
+            <input type="text" placeholder="Enter your skills" />
+          </div>
+          <button type="submit" class="btn">Generate Resume</button>
+        </form>
+      </div>
+    </section>
+
+
+
+
+
+    </div>
+
+
+          <script src="script.js"></script>
+
+  </body>
+</html>
