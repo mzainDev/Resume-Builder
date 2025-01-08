@@ -56,7 +56,7 @@ body {
   background: var(--light);
   width: 230px;
   height: 100%;
-  z-index: 2000;
+  /* z-index: 2000; */
   overflow-x: hidden;
   scrollbar-width: none;
   transition: all 0.3s ease;
@@ -167,10 +167,11 @@ body {
   color: var(--danger);
 }
 
-.butttons{
-  display: grid;
-  row-gap: 30px;
-  padding: 20px;
+.buttons{
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: space-around;
 }
 
 
@@ -184,7 +185,7 @@ body{
 .container{
     position: relative;
     max-width: 700px;
-    width: 100%;
+    width: 50vw;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -215,13 +216,13 @@ body{
 }
 
 .btn {
-  /* padding: 1rem 2rem; */
+  padding: 8px;
   font-size: 1rem;
   color: #fff;
   background-color: #1d4ed8;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  margin-top: 10px;
 }
 
 
