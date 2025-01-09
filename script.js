@@ -24,35 +24,20 @@ function skill() {
     document.getElementById("skill").style.display = "";
 }
 
-//   function generate() {
-//     const zain = document.querySelectorAll(".input-val");
-//     //
-//     document.getElementById("pInformation").style.display = "none";
-//     document.getElementById("obj").style.display = "none";
-//     document.getElementById("edu").style.display = "none";
-//     document.getElementById("skill").style.display = "none";
-
-//     let inputValues = [];
-//     zain.forEach((input) => {
-//       inputValues.push(input.value); // Collect the value
-//     });
-
-//     document.write(`Name:${inputValues}`);
-//     window.location.href="generatecv.html";
-//   }
-
 function generate() {
-    const inputs = document.querySelectorAll(".input-val");
-    let resumeData = {};
+    const zain = document.querySelectorAll(".input-val");
+    //
+    document.getElementById("pInformation").style.display = "none";
+    document.getElementById("obj").style.display = "none";
+    document.getElementById("edu").style.display = "none";
+    document.getElementById("skill").style.display = "none";
 
-    inputs.forEach((input) => {
-        const label = input.previousElementSibling.innerText;
-        resumeData[label] = input.value;
+    let inputValues = [];
+    zain.forEach((input) => {
+        inputValues.push(input.value);
     });
 
-    // Save data to local storage
-    localStorage.setItem("resumeData", JSON.stringify(resumeData));
-
-    // Redirect to the new page
+    document.write(`Name:${inputValues}`);
     window.location.href = "generatecv.html";
 }
+
