@@ -38,6 +38,6 @@ function generate() {
     });
 
     document.write(`Name:${inputValues}`);
-    window.location.href = "generatecv.html";
+    
 }
 
