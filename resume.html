@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="resume.css"/>
+    <link rel="stylesheet" href="resume.css" />
     <title>Resume Builder</title>
   </head>
 
@@ -15,19 +15,19 @@
       </a>
 
       <div class="buttons">
-        <button onclick="info()">Personal informatiom</button>
-        <button onclick="objective()">Objective</button>
-        <button onclick="edu()">Education</button>
-        <button onclick="skill()">Skills</button>
+        <button onclick="showSection('pInformation')">Personal Information</button>
+        <button onclick="showSection('obj')">Objective</button>
+        <button onclick="showSection('edu')">Education</button>
+        <button onclick="showSection('skill')">Skills</button>
       </div>
     </div>
     <section class="container">
-      <div id="pInformation">
+      <div id="pInformation" class="form-section">
         <h1>Personal information</h1>
-        <div action="" class="form">
+        <div class="form">
           <div class="input-box">
             <label>Full Name</label>
-            <input class="input-val" id="fname" placeholder="Enter full name" />
+            <input class="input-val" type="text" placeholder="Enter Full name" />
           </div>
 
           <div class="input-box">
@@ -35,7 +35,7 @@
             <input
               class="input-val"
               type="text"
-              placeholder="Enter full name"
+              placeholder="Enter your Email"
             />
           </div>
           <div class="input-box">
@@ -43,21 +43,27 @@
             <input
               class="input-val"
               type="number"
-              placeholder="Enter full number"
+              placeholder="Enter full phone number"
             />
           </div>
           <div class="input-box">
             <label>LinkedIn Link</label>
-            <input type="text" placeholder="Enter full name" />
+            <input type="text" required="text" placeholder="Enter LinkedIn link" />
           </div>
           <div class="input-box">
-            <label for="github">Enter GitHub Link:</label>
-            <input type="text" id="github" required />
+            <label>GitHub Link</label>
+            <input
+              class="input-val"
+              type="url"
+              placeholder="Enter GitHub link"
+            />
           </div>
-          <button type="button" class="btn" onclick="objective()">Next</button>
+          <button type="button" class="btn" onclick="showSection('obj')">
+            Next
+          </button>
         </div>
       </div>
-      <div style="display: none" id="obj">
+      <div id="obj" class="form-section" style="display: none">
         <h1>Objective</h1>
         <div class="form">
           <div class="input-box">
@@ -65,11 +71,19 @@
             <textarea placeholder="Enter your objective" rows="4"></textarea>
           </div>
 
-          <button type="button" class="btn" onclick="edu()">Next</button>
-          <button type="button" class="btn" onclick="info()">Previous</button>
+          <button
+            type="button"
+            class="btn"
+            onclick="showSection('pInformation')"
+          >
+            Previous
+          </button>
+          <button type="button" class="btn" onclick="showSection('edu')">
+            Next
+          </button>
         </div>
       </div>
-      <div style="display: none" id="edu">
+      <div id="edu" class="form-section" style="display: none">
         <h1>Education</h1>
         <div class="form">
           <div class="input-box">
@@ -84,21 +98,27 @@
             <label>Year of Graduation</label>
             <input type="text" placeholder="Enter year of graduation" />
           </div>
-          <button type="button" class="btn" onclick="skill()">Next</button>
-          <button type="button" class="btn" onclick="objective()">
+          <button type="button" class="btn" onclick="showSection('obj')">
             Previous
+          </button>
+          <button type="button" class="btn" onclick="showSection('skill')">
+            Next
           </button>
         </div>
       </div>
-      <div style="display: none" id="skill">
+      <div id="skill" class="form-section" style="display: none">
         <h1>Skills</h1>
         <div class="form">
           <div class="input-box">
             <label>Skills</label>
             <input type="text" placeholder="Enter your skills" />
           </div>
-          <button onclick="generate()" class="btn">Generate Resume</button>
-          <button type="button" class="btn" onclick="edu()">Previous</button>
+          <button type="button" class="btn" onclick="showSection('edu')">
+            Previous
+          </button>
+          <button type="button" class="btn" onclick="generateResume()">
+            Generate Resume
+          </button>
         </div>
       </div>
     </section>
